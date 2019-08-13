@@ -1,0 +1,12 @@
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.exe.config
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.exe
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.pdb
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csprojAssemblyReference.cache
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Main.frmMain.resources
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Main.frmPesquisarProduto.resources
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Properties.Resources.resources
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Form1.resources
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.GenerateResource.cache
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CoreCompileInputs.cache
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.exe
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.pdb

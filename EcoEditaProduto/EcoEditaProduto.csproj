@@ -61,13 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main\dataMain.cs" />
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\modelInformacoes.cs" />
     <Compile Include="PesquisarProduto\dataProduto.cs" />
+    <Compile Include="PesquisarProduto\dsProdutos.cs">
+      <DependentUpon>dsProdutos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisarProduto\dsProdutos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProdutos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PesquisarProduto\frmPesquisarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +95,9 @@
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PesquisarProduto\frmPesquisarProduto.resx">
+      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,6 +111,17 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PesquisarProduto\dsProdutos.xsc">
+      <DependentUpon>dsProdutos.xsd</DependentUpon>
+    </None>
+    <None Include="PesquisarProduto\dsProdutos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProdutos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PesquisarProduto\dsProdutos.xss">
+      <DependentUpon>dsProdutos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

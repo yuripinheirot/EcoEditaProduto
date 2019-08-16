@@ -12,7 +12,7 @@ namespace EcoEditaProduto.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.1.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace EcoEditaProduto.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DataSource=127.0.0.1; Database=127.0.0.1:D:\\Dados\\toklar\\ecodados.eco; User=SYSDB" +
+        [global::System.Configuration.DefaultSettingValueAttribute("DataSource=127.0.0.1; Database=127.0.0.1:c:\\ecosis\\dados\\ecodados.eco; User=SYSDB" +
             "A; Password=masterkey")]
         public string Conexao {
             get {

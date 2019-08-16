@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Conexao" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DataSource=127.0.0.1; Database=127.0.0.1:D:\Dados\toklar\ecodados.eco; User=SYSDBA; Password=masterkey</Value>
+      <Value Profile="(Default)">DataSource=127.0.0.1; Database=127.0.0.1:c:\ecosis\dados\ecodados.eco; User=SYSDBA; Password=masterkey</Value>
     </Setting>
   </Settings>
 </SettingsFile>

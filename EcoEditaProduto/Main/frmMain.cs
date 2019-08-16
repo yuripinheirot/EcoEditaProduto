@@ -21,5 +21,14 @@ namespace EcoEditaProduto.Main
         {
             Close();
         }
+
+        private void TbxIdProduto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                PesquisarProduto.frmPesquisarProduto frmProduto = new PesquisarProduto.frmPesquisarProduto(this);
+                frmProduto.ShowDialog();
+            }
+        }
     }
 }

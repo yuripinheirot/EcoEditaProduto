@@ -11,21 +11,50 @@ namespace EcoEditaProduto.PesquisarProduto
 {
     class dataProduto
     {
-        FbConnection conexao = null;
-        string server = Properties.Settings.Default.Conexao;
+        static FbConnection conexao = null;
+        static string server = Properties.Settings.Default.Conexao;
 
-        public void AtualizaDgv(DataGridView dgv)
+        public static void AtualizaDgv(DataGridView dgv, string PesquisarPor, string PalavraChave, string Inativo)
         {
             try
             {
                 conexao = new FbConnection(server);
-                string query = 
+                conexao.Open();
+                string query =
+                "select first 1000                                                                     " +
+                "																					  " +
+                "pdt.produto,                                                                          " +
+                "pdg.descricao,                                                                        " +
+                "pdg.embalagem,                                                                        " +
+                "mrc.descricao as Marca,                                                               " +
+                "grp.descricao as Grupo,                                                               " +
+                "sgp.descricao as SubGrupo,                                                            " +
+                "pdg.referencia,                                                                       " +
+                "pdt.prpraticado as PrecoPraticado,                                                    " +
+                "pdt.ativo                                                                             " +
+                "																					  " +
+                "from testproduto pdt                                                                  " +
+                "inner join testprodutogeral pdg on (pdt.produto = pdg.codigo)                         " +
+                "inner join testmarca mrc on (pdg.marca = mrc.codigo)                                  " +
+                "inner join testgrupo grp on (pdt.grupo = grp.codigo and pdt.empresa = grp.empresa)    " +
+                "inner join testsubgrupo sgp on (sgp.grupo = grp.codigo and sgp.empresa = grp.empresa) "+
+                "where " + Inativo + " and " + PesquisarPor + " like upper('%" + PalavraChave + "%');";
+                FbCommand cmd = new FbCommand(query, conexao);
+                DataTable table = new DataTable();
+                FbDataAdapter adapter = new FbDataAdapter();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(table);
+                dgv.DataSource = table;
             }
-            catch (Exception e)
+            catch (Exception erro)
             {
-
-                throw e;
+                throw erro;
             }
+            finally
+            {
+                conexao.Close();
+            }
+
         }
     }
 }

@@ -30,5 +30,18 @@ namespace EcoEditaProduto.Main
                 frmProduto.ShowDialog();
             }
         }
+
+        private void TbxIdProduto_Leave(object sender, EventArgs e)
+        {
+            dataMain data = new dataMain();
+            modelInformacoes model = data.BuscaInformcoes(tbxIdProduto.Text);
+
+            tbxObservacao.Text = model.observacao;
+            tbxComposicao.Text = model.composicao;
+            tbxLocalizacao.Text = model.endereco;
+            tbxAplicacao.Text = model.aplicacao;
+            tbxReferencia.Text = model.referencia;
+
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace EcoEditaProduto.Main
         public string descricao { get; set; }
         public string observacao { get; set; }
         public string composicao { get; set; }
-        public string localizacao { get; set; }
+        public string endereco { get; set; }
         public string aplicacao { get; set; }
         public string referencia { get; set; }
     }

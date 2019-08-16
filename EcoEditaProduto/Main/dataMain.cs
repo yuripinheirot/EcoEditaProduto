@@ -19,13 +19,43 @@ namespace EcoEditaProduto.Main
             try
             {
                 conexao = new FbConnection(server);
-                string query = ""
+                conexao.Open();
+                modelInformacoes model = new modelInformacoes();
+                string query =
+                    "select                                                   " +
+                    "pdg.descricao,                                           " +
+                    "pdg.observacao,                                          " +
+                    "pdg.composicao,                                          " +
+                    "pdg.aplicacao,                                           " +
+                    "pdg.referencia,                                          " +
+                    "est.endereco                                             " +
+                    "														  " +
+                    "from testprodutogeral pdg                                " +
+                    "inner join testestoque est on (pdg.codigo = est.produto) " +
+                    "where pdg.codigo = @codigo                               ";
+                FbCommand cmd = new FbCommand(query, conexao);
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+                FbDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    model.descricao = reader["descricao"].ToString();
+                    model.observacao = reader["observacao"].ToString();
+                    model.composicao = reader["composicao"].ToString();
+                    model.aplicacao = reader["aplicacao"].ToString();
+                    model.referencia = reader["referencia"].ToString();
+                    model.endereco = reader["endereco"].ToString();
+                }
+                return model;
             }
             catch (Exception)
             {
 
                 throw;
             }
+            finally
+            {
+                conexao.Close();
+            }     
         }
     }
 }

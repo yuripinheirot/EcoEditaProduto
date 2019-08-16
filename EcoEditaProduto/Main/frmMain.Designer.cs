@@ -67,6 +67,7 @@
             this.tbxIdProduto.TabIndex = 0;
             this.tbxIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxIdProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbxIdProduto_KeyDown);
+            this.tbxIdProduto.Leave += new System.EventHandler(this.TbxIdProduto_Leave);
             // 
             // label1
             // 

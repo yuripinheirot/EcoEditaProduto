@@ -87,6 +87,7 @@ namespace EcoEditaProduto.PesquisarProduto
         {
             main.tbxIdProduto.Text = dgvProduto.CurrentRow.Cells[0].Value.ToString();
             main.tbxDescProduto.Text = dgvProduto.CurrentRow.Cells[1].Value.ToString();
+            main.BuscaInformacoes();
             Close();
 
         }

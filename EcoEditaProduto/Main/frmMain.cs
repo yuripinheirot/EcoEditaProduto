@@ -12,6 +12,18 @@ namespace EcoEditaProduto.Main
 {
     public partial class frmMain : Form
     {
+        //METODOS
+        public void BuscaInformacoes()
+        {
+            dataMain data = new dataMain();
+            modelInformacoes model = data.BuscaInformacoes(tbxIdProduto.Text);
+
+            tbxObservacao.Text = model.observacao;
+            tbxComposicao.Text = model.composicao;
+            tbxLocalizacao.Text = model.endereco;
+            tbxAplicacao.Text = model.aplicacao;
+            tbxReferencia.Text = model.referencia;
+        }
         public frmMain()
         {
             InitializeComponent();
@@ -33,15 +45,14 @@ namespace EcoEditaProduto.Main
 
         private void TbxIdProduto_Leave(object sender, EventArgs e)
         {
-            dataMain data = new dataMain();
-            modelInformacoes model = data.BuscaInformcoes(tbxIdProduto.Text);
+            BuscaInformacoes();
 
-            tbxObservacao.Text = model.observacao;
-            tbxComposicao.Text = model.composicao;
-            tbxLocalizacao.Text = model.endereco;
-            tbxAplicacao.Text = model.aplicacao;
-            tbxReferencia.Text = model.referencia;
+        }
 
+        private void TbxIdProduto_Enter(object sender, EventArgs e)
+        {
+            tbxIdProduto.Focus();
+            tbxIdProduto.Select(0, tbxIdProduto.Text.Length);
         }
     }
 }

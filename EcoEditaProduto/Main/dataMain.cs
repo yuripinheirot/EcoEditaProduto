@@ -14,7 +14,7 @@ namespace EcoEditaProduto.Main
         static FbConnection conexao = null;
         static string server = Properties.Settings.Default.Conexao;
 
-        public modelInformacoes BuscaInformcoes(string codigo)
+        public modelInformacoes BuscaInformacoes(string codigo)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace EcoEditaProduto.Main
                     "														  " +
                     "from testprodutogeral pdg                                " +
                     "inner join testestoque est on (pdg.codigo = est.produto) " +
-                    "where pdg.codigo = @codigo                               ";
+                    "where cast(pdg.codigo as int) = @codigo                  ";
                 FbCommand cmd = new FbCommand(query, conexao);
                 cmd.Parameters.AddWithValue("@codigo", codigo);
                 FbDataReader reader = cmd.ExecuteReader();

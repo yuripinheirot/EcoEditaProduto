@@ -57,5 +57,45 @@ namespace EcoEditaProduto.Main
                 conexao.Close();
             }     
         }
+
+        public static void SalvarInformacoes(modelInformacoes model)
+        {
+            try
+            {
+                conexao = new FbConnection(server);
+                conexao.Open();
+                string query =
+                    "UPDATE testprodutoGERAL A SET          " +
+                    "								        " +
+                    "A.observacao = @OBSERVACAO,            " +
+                    "A.composicao = @COMPOSICAO,            " +
+                    "A.aplicacao = @APLICACAO,              " +
+                    "A.referencia = @REFERENCIA             " +
+                    "WHERE                                  " +
+                    "A.codigo = @CODIGO;commit work;        ";
+                   // "								        " +
+                   // "UPDATE testestoque B SET               " +
+                   // "B.endereco = @ENDERECO                 " +
+                   // "WHERE                                  " +
+                   // "B.empresa = @EMPRESA                   " +
+                   // "AND B.produto = @PRODUTO;commit work;  " ;
+                FbCommand cmd = new FbCommand(query, conexao);
+                cmd.Parameters.AddWithValue("@OBSERVACAO",model.observacao);
+                cmd.Parameters.AddWithValue("@COMPOSICAO", model.composicao);
+                cmd.Parameters.AddWithValue("@APLICACAO", model.aplicacao);
+                cmd.Parameters.AddWithValue("@REFERENCIA", model.referencia);
+                cmd.Parameters.AddWithValue("@CODIGO", model.codigo);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

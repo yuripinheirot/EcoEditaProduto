@@ -24,6 +24,18 @@ namespace EcoEditaProduto.Main
             tbxAplicacao.Text = model.aplicacao;
             tbxReferencia.Text = model.referencia;
         }
+
+        public void LimpaTela()
+        {
+            tbxIdProduto.Text = null;
+            tbxDescProduto.Text = null;
+            tbxObservacao.Text = null;
+            tbxComposicao.Text = null;
+            tbxLocalizacao.Text = null;
+            tbxAplicacao.Text = null;
+            tbxReferencia.Text = null;
+            tbxIdProduto.Focus();
+        }
         public frmMain()
         {
             InitializeComponent();
@@ -53,6 +65,27 @@ namespace EcoEditaProduto.Main
         {
             tbxIdProduto.Focus();
             tbxIdProduto.Select(0, tbxIdProduto.Text.Length);
+        }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modelInformacoes model = new modelInformacoes();
+                model.observacao = tbxObservacao.Text;
+                model.composicao = tbxComposicao.Text;
+                model.aplicacao = tbxAplicacao.Text;
+                model.referencia = tbxReferencia.Text;
+                model.codigo = tbxIdProduto.Text;
+                dataMain.SalvarInformacoes(model);
+                MessageBox.Show("Dados alterados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpaTela();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Ops! Algo inesperado aconteceu, contate o seu suporte." + "\n" + "\n" + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

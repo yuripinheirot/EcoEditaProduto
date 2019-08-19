@@ -72,7 +72,7 @@ namespace EcoEditaProduto.Main
                     "A.aplicacao = @APLICACAO,              " +
                     "A.referencia = @REFERENCIA             " +
                     "WHERE                                  " +
-                    "A.codigo = @CODIGO;commit work;        ";
+                    "A.codigo = @CODIGO;                    ";
                    // "								        " +
                    // "UPDATE testestoque B SET               " +
                    // "B.endereco = @ENDERECO                 " +

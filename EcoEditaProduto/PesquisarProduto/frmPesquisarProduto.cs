@@ -91,5 +91,28 @@ namespace EcoEditaProduto.PesquisarProduto
             Close();
 
         }
+
+        private void TbxPalavraChave_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (dgvProduto.Focused == false)
+                {
+                    if (e.KeyCode == Keys.Up)
+                    {
+                        int i = dgvProduto.CurrentRow.Index - 1;
+                        dgvProduto.CurrentCell = dgvProduto.Rows[i].Cells[0];
+                    }
+                    else if (e.KeyCode == Keys.Down)
+                    {
+                        int i = dgvProduto.CurrentRow.Index + 1;
+                        dgvProduto.CurrentCell = dgvProduto.Rows[i].Cells[0];
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
     }
 }

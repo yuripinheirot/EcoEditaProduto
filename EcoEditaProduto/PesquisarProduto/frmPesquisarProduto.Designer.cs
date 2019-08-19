@@ -34,6 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSair = new System.Windows.Forms.Button();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
+            this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.embalagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precopraticadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsProdutos = new EcoEditaProduto.PesquisarProduto.dsProdutos();
             this.lblEncontrados = new System.Windows.Forms.Label();
             this.cbxPesquisarPor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,25 +49,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnInserir = new System.Windows.Forms.Button();
             this.chkInativos = new System.Windows.Forms.CheckBox();
-            this.dsProdutos = new EcoEditaProduto.PesquisarProduto.dsProdutos();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.embalagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.referenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precopraticadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
             // 
             this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSair.Location = new System.Drawing.Point(797, 476);
+            this.btnSair.Location = new System.Drawing.Point(1063, 586);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.Size = new System.Drawing.Size(100, 28);
             this.btnSair.TabIndex = 2;
             this.btnSair.Text = "Sai&r";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -96,22 +97,91 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProduto.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvProduto.Location = new System.Drawing.Point(12, 25);
+            this.dgvProduto.Location = new System.Drawing.Point(16, 31);
+            this.dgvProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProduto.MultiSelect = false;
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.ReadOnly = true;
             this.dgvProduto.RowHeadersWidth = 24;
             this.dgvProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduto.Size = new System.Drawing.Size(860, 374);
+            this.dgvProduto.Size = new System.Drawing.Size(1147, 460);
             this.dgvProduto.TabIndex = 3;
             this.dgvProduto.VirtualMode = true;
+            // 
+            // produtoDataGridViewTextBoxColumn
+            // 
+            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "produto";
+            this.produtoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.produtoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
+            this.produtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.produtoDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Produto";
+            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 375;
+            // 
+            // embalagemDataGridViewTextBoxColumn
+            // 
+            this.embalagemDataGridViewTextBoxColumn.DataPropertyName = "embalagem";
+            this.embalagemDataGridViewTextBoxColumn.HeaderText = "Emb";
+            this.embalagemDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.embalagemDataGridViewTextBoxColumn.Name = "embalagemDataGridViewTextBoxColumn";
+            this.embalagemDataGridViewTextBoxColumn.ReadOnly = true;
+            this.embalagemDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.marcaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // referenciaDataGridViewTextBoxColumn
+            // 
+            this.referenciaDataGridViewTextBoxColumn.DataPropertyName = "referencia";
+            this.referenciaDataGridViewTextBoxColumn.HeaderText = "Referência";
+            this.referenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.referenciaDataGridViewTextBoxColumn.Name = "referenciaDataGridViewTextBoxColumn";
+            this.referenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.referenciaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // precopraticadoDataGridViewTextBoxColumn
+            // 
+            this.precopraticadoDataGridViewTextBoxColumn.DataPropertyName = "precopraticado";
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.precopraticadoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.precopraticadoDataGridViewTextBoxColumn.HeaderText = "Preço";
+            this.precopraticadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.precopraticadoDataGridViewTextBoxColumn.Name = "precopraticadoDataGridViewTextBoxColumn";
+            this.precopraticadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precopraticadoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.dsProdutos;
+            // 
+            // dsProdutos
+            // 
+            this.dsProdutos.DataSetName = "dsProdutos";
+            this.dsProdutos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblEncontrados
             // 
             this.lblEncontrados.AutoSize = true;
-            this.lblEncontrados.Location = new System.Drawing.Point(9, 9);
+            this.lblEncontrados.Location = new System.Drawing.Point(12, 11);
+            this.lblEncontrados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEncontrados.Name = "lblEncontrados";
-            this.lblEncontrados.Size = new System.Drawing.Size(114, 13);
+            this.lblEncontrados.Size = new System.Drawing.Size(152, 17);
             this.lblEncontrados.TabIndex = 2;
             this.lblEncontrados.Text = "Produtos encontrados:";
             // 
@@ -125,42 +195,48 @@
             "Código",
             "Marca",
             "Referência"});
-            this.cbxPesquisarPor.Location = new System.Drawing.Point(12, 439);
+            this.cbxPesquisarPor.Location = new System.Drawing.Point(16, 540);
+            this.cbxPesquisarPor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxPesquisarPor.Name = "cbxPesquisarPor";
-            this.cbxPesquisarPor.Size = new System.Drawing.Size(205, 21);
+            this.cbxPesquisarPor.Size = new System.Drawing.Size(272, 24);
             this.cbxPesquisarPor.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 423);
+            this.label1.Location = new System.Drawing.Point(12, 521);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Pesquisar por";
             // 
             // tbxPalavraChave
             // 
-            this.tbxPalavraChave.Location = new System.Drawing.Point(12, 479);
+            this.tbxPalavraChave.Location = new System.Drawing.Point(16, 590);
+            this.tbxPalavraChave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxPalavraChave.Name = "tbxPalavraChave";
-            this.tbxPalavraChave.Size = new System.Drawing.Size(205, 20);
+            this.tbxPalavraChave.Size = new System.Drawing.Size(272, 22);
             this.tbxPalavraChave.TabIndex = 0;
             this.tbxPalavraChave.TextChanged += new System.EventHandler(this.TbxPalavraChave_TextChanged);
+            this.tbxPalavraChave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbxPalavraChave_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 463);
+            this.label2.Location = new System.Drawing.Point(12, 570);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Palavra chave";
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(716, 476);
+            this.btnInserir.Location = new System.Drawing.Point(955, 586);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(75, 23);
+            this.btnInserir.Size = new System.Drawing.Size(100, 28);
             this.btnInserir.TabIndex = 1;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
@@ -169,80 +245,23 @@
             // chkInativos
             // 
             this.chkInativos.AutoSize = true;
-            this.chkInativos.Location = new System.Drawing.Point(772, 8);
+            this.chkInativos.Location = new System.Drawing.Point(1029, 10);
+            this.chkInativos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkInativos.Name = "chkInativos";
-            this.chkInativos.Size = new System.Drawing.Size(100, 17);
+            this.chkInativos.Size = new System.Drawing.Size(130, 21);
             this.chkInativos.TabIndex = 5;
             this.chkInativos.Text = "&Mostrar inativos";
             this.chkInativos.UseVisualStyleBackColor = true;
             this.chkInativos.CheckedChanged += new System.EventHandler(this.ChkInativos_CheckedChanged);
             // 
-            // dsProdutos
-            // 
-            this.dsProdutos.DataSetName = "dsProdutos";
-            this.dsProdutos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dsProdutos;
-            // 
-            // produtoDataGridViewTextBoxColumn
-            // 
-            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "produto";
-            this.produtoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
-            this.produtoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.produtoDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Width = 375;
-            // 
-            // embalagemDataGridViewTextBoxColumn
-            // 
-            this.embalagemDataGridViewTextBoxColumn.DataPropertyName = "embalagem";
-            this.embalagemDataGridViewTextBoxColumn.HeaderText = "Emb";
-            this.embalagemDataGridViewTextBoxColumn.Name = "embalagemDataGridViewTextBoxColumn";
-            this.embalagemDataGridViewTextBoxColumn.ReadOnly = true;
-            this.embalagemDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.marcaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // referenciaDataGridViewTextBoxColumn
-            // 
-            this.referenciaDataGridViewTextBoxColumn.DataPropertyName = "referencia";
-            this.referenciaDataGridViewTextBoxColumn.HeaderText = "Referência";
-            this.referenciaDataGridViewTextBoxColumn.Name = "referenciaDataGridViewTextBoxColumn";
-            this.referenciaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precopraticadoDataGridViewTextBoxColumn
-            // 
-            this.precopraticadoDataGridViewTextBoxColumn.DataPropertyName = "precopraticado";
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.precopraticadoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.precopraticadoDataGridViewTextBoxColumn.HeaderText = "Preço";
-            this.precopraticadoDataGridViewTextBoxColumn.Name = "precopraticadoDataGridViewTextBoxColumn";
-            this.precopraticadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // frmPesquisarProduto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnInserir;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CancelButton = this.btnSair;
-            this.ClientSize = new System.Drawing.Size(885, 511);
+            this.ClientSize = new System.Drawing.Size(1180, 629);
             this.Controls.Add(this.chkInativos);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.tbxPalavraChave);
@@ -254,6 +273,7 @@
             this.Controls.Add(this.btnSair);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmPesquisarProduto";
             this.ShowIcon = false;
@@ -262,8 +282,8 @@
             this.Text = "Pesquisa de produto";
             this.Load += new System.EventHandler(this.FrmPesquisarProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

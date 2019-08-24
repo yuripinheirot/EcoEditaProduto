@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EcoEditaProduto.Main;
+using System.Data;
+using FirebirdSql.Data.FirebirdClient;
 
 namespace EcoEditaProduto.PesquisarProduto
 {
@@ -16,30 +18,10 @@ namespace EcoEditaProduto.PesquisarProduto
         frmMain main = null;
 
         //metodos
-        void AtualizaDgv()
+        void CarregarDgv()
         {
             try
             {
-                string pesquisarPor()
-                {
-                    switch (cbxPesquisarPor.Text)
-                    {
-                        case "Código":
-                            return "pdt.produto";
-                        case "Descrição":
-                            return "pdg.descricao";
-                        case "Marca":
-                            return "mrc.descricao";
-                        case "Grupo":
-                            return "grp.grupo";
-                        case "Sub grupo":
-                            return "sgp.subgrupo";
-                        case "Referência":
-                            return "pdg.referencia";
-                        default:
-                            return null;
-                    }
-                }
                 string chkAtivo()
                 {
                     if (chkInativos.Checked)
@@ -52,7 +34,7 @@ namespace EcoEditaProduto.PesquisarProduto
                     }
                 }
 
-                dataProduto.AtualizaDgv(dgvProduto, pesquisarPor(), tbxPalavraChave.Text, chkAtivo());
+                dataProduto.AtualizaDgv(dgvProduto, chkAtivo());
                 lblEncontrados.Text = "Produtos encontrados: " + dgvProduto.RowCount;
             }
             catch (Exception erro)
@@ -62,9 +44,43 @@ namespace EcoEditaProduto.PesquisarProduto
             
         }
 
-        void AtualizaDgvTeste()
+        void AtualizaDgv()
         {
+            string pesquisarPor()
+            {
+                switch (cbxPesquisarPor.Text)
+                {
+                    case "Código":
+                        return "produto";
+                    case "Descrição":
+                        return "descricao";
+                    case "Marca":
+                        return "marca";
+                    case "Grupo":
+                        return "grupo";
+                    case "Sub grupo":
+                        return "subgrupo";
+                    case "Referência":
+                        return "referencia";
+                    default:
+                        return null;
+                }
+            }
 
+            try
+            {
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dgvProduto.DataSource;
+                bs.Filter = pesquisarPor() +" like '%" + tbxPalavraChave.Text + "%'";
+                dgvProduto.DataSource = null;
+                dgvProduto.DataSource = bs.DataSource;
+                lblEncontrados.Text = "Produtos encontrados: " + dgvProduto.RowCount;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
         }
 
         public frmPesquisarProduto(frmMain main)
@@ -76,17 +92,18 @@ namespace EcoEditaProduto.PesquisarProduto
         private void FrmPesquisarProduto_Load(object sender, EventArgs e)
         {
             cbxPesquisarPor.Text = "Descrição";
-            AtualizaDgv();
+            CarregarDgv();
         }
 
         private void TbxPalavraChave_TextChanged(object sender, EventArgs e)
         {
+            //atualizaDgv();
             AtualizaDgv();
         }
 
         private void ChkInativos_CheckedChanged(object sender, EventArgs e)
         {
-            AtualizaDgv();
+            CarregarDgv();
         }
 
         private void BtnInserir_Click(object sender, EventArgs e)

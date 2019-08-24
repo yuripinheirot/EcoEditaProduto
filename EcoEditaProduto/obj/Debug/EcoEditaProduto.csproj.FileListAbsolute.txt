@@ -3,7 +3,6 @@ C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\bin\Debug\EcoEdi
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.pdb
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csprojAssemblyReference.cache
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Main.frmMain.resources
-C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Main.frmPesquisarProduto.resources
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Properties.Resources.resources
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Form1.resources
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.GenerateResource.cache
@@ -29,3 +28,11 @@ C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEdi
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CopyComplete
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.exe
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.pdb
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.Firebird.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.xml
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.PesquisarProduto.frmPesquisarProduto.resources
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CopyComplete

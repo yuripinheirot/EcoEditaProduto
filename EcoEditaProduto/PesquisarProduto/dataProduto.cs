@@ -14,14 +14,14 @@ namespace EcoEditaProduto.PesquisarProduto
         static FbConnection conexao = null;
         static string server = Properties.Settings.Default.Conexao;
 
-        public static void AtualizaDgv(DataGridView dgv, string PesquisarPor, string PalavraChave, string Inativo)
+        public static void AtualizaDgv(DataGridView dgv, string Inativo)
         {
             try
             {
                 conexao = new FbConnection(server);
                 conexao.Open();
                 string query =
-                "select first 1000                                                                     " +
+                "select                                                                                " +
                 "																					   " +
                 "pdt.produto,                                                                          " +
                 "pdg.descricao,                                                                        " +
@@ -38,7 +38,7 @@ namespace EcoEditaProduto.PesquisarProduto
                 "inner join testmarca mrc on (pdg.marca = mrc.codigo)                                  " +
                 "inner join testgrupo grp on (pdt.grupo = grp.codigo and pdt.empresa = grp.empresa)    " +
                 "inner join testsubgrupo sgp on (sgp.grupo = grp.codigo and sgp.empresa = grp.empresa) " +
-                "where " + Inativo + " and " + PesquisarPor + " like upper('%" + PalavraChave + "%');  ";
+                "where " + Inativo + " ;";//and " + PesquisarPor + " like upper('%" + PalavraChave + "%');  ";
                 FbCommand cmd = new FbCommand(query, conexao);
                 DataTable table = new DataTable();
                 FbDataAdapter adapter = new FbDataAdapter();

@@ -3,7 +3,18 @@
   <Profiles />
   <Settings>
     <Setting Name="Conexao" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DataSource=127.0.0.1; Database=127.0.0.1:c:\ecosis\dados\ecodados.eco; User=SYSDBA; Password=masterkey</Value>
+      <Value Profile="(Default)"> User=SYSDBA;   
+ Password=masterkey;   
+ Database=c:\ecosis\dados\variedades.eco;   
+ DataSource=localhost;   
+ Port=3050;   
+ Dialect=3;   
+ Charset=NONE;   
+ Role=;   
+ Connection lifetime=15;   
+ Pooling=true;   
+ Packet Size=8192;   
+ ServerType=0 ;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

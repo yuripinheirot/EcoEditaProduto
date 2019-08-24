@@ -22,7 +22,7 @@ namespace EcoEditaProduto.PesquisarProduto
                 conexao.Open();
                 string query =
                 "select first 1000                                                                     " +
-                "																					  " +
+                "																					   " +
                 "pdt.produto,                                                                          " +
                 "pdg.descricao,                                                                        " +
                 "pdg.embalagem,                                                                        " +
@@ -32,13 +32,13 @@ namespace EcoEditaProduto.PesquisarProduto
                 "pdg.referencia,                                                                       " +
                 "pdt.prpraticado as PrecoPraticado,                                                    " +
                 "pdt.ativo                                                                             " +
-                "																					  " +
+                "																					   " +
                 "from testproduto pdt                                                                  " +
                 "inner join testprodutogeral pdg on (pdt.produto = pdg.codigo)                         " +
                 "inner join testmarca mrc on (pdg.marca = mrc.codigo)                                  " +
                 "inner join testgrupo grp on (pdt.grupo = grp.codigo and pdt.empresa = grp.empresa)    " +
-                "inner join testsubgrupo sgp on (sgp.grupo = grp.codigo and sgp.empresa = grp.empresa) "+
-                "where " + Inativo + " and " + PesquisarPor + " like upper('%" + PalavraChave + "%');";
+                "inner join testsubgrupo sgp on (sgp.grupo = grp.codigo and sgp.empresa = grp.empresa) " +
+                "where " + Inativo + " and " + PesquisarPor + " like upper('%" + PalavraChave + "%');  ";
                 FbCommand cmd = new FbCommand(query, conexao);
                 DataTable table = new DataTable();
                 FbDataAdapter adapter = new FbDataAdapter();

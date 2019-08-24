@@ -23,6 +23,7 @@ namespace EcoEditaProduto.Main
             tbxLocalizacao.Text = model.endereco;
             tbxAplicacao.Text = model.aplicacao;
             tbxReferencia.Text = model.referencia;
+            tbxDescProduto.Text = model.descricao;
         }
 
         public void LimpaTela()
@@ -57,6 +58,12 @@ namespace EcoEditaProduto.Main
 
         private void TbxIdProduto_Leave(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tbxIdProduto.Text))
+            {
+                LimpaTela();
+                return;
+            }
+
             BuscaInformacoes();
 
         }

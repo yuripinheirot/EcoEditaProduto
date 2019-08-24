@@ -61,6 +61,12 @@ namespace EcoEditaProduto.PesquisarProduto
             }
             
         }
+
+        void AtualizaDgvTeste()
+        {
+
+        }
+
         public frmPesquisarProduto(frmMain main)
         {
             InitializeComponent();

@@ -25,8 +25,18 @@ namespace EcoEditaProduto.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DataSource=127.0.0.1; Database=127.0.0.1:c:\\ecosis\\dados\\ecodados.eco; User=SYSDB" +
-            "A; Password=masterkey")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@" User=SYSDBA;   
+ Password=masterkey;   
+ Database=c:\ecosis\dados\variedades.eco;   
+ DataSource=localhost;   
+ Port=3050;   
+ Dialect=3;   
+ Charset=NONE;   
+ Role=;   
+ Connection lifetime=15;   
+ Pooling=true;   
+ Packet Size=8192;   
+ ServerType=0 ;")]
         public string Conexao {
             get {
                 return ((string)(this["Conexao"]));

@@ -66,14 +66,13 @@ namespace EcoEditaProduto.Main
                 conexao.Open();
                 string query =
                     "UPDATE testprodutoGERAL A SET          " +
-                    "								        " +
                     "A.observacao = @OBSERVACAO,            " +
                     "A.composicao = @COMPOSICAO,            " +
                     "A.aplicacao = @APLICACAO,              " +
                     "A.referencia = @REFERENCIA             " +
                     "WHERE                                  " +
-                    "A.codigo = @CODIGO;                    ";
-                   // "								        " +
+                    "cast(A.codigo as int) = @CODIGO;       " ;
+                   // "								          " +
                    // "UPDATE testestoque B SET               " +
                    // "B.endereco = @ENDERECO                 " +
                    // "WHERE                                  " +

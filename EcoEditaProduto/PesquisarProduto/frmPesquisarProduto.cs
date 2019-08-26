@@ -13,7 +13,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace EcoEditaProduto.PesquisarProduto
 {
-    public partial class frmPesquisarProduto : Form
+    public partial class frmPesquisarProduto : Form, IDisposable
     {
         frmMain main = null;
         static BindingSource bind = null;
@@ -23,6 +23,10 @@ namespace EcoEditaProduto.PesquisarProduto
         {
             try
             {
+                dataProduto.PesquisaEmpresa(cbxEmpresa);
+                cbxEmpresa.SelectedIndex = 0;
+                string empresa = cbxEmpresa.Text.Substring(0, 2);
+
                 string chkAtivo()
                 {
                     if (chkInativos.Checked)
@@ -41,7 +45,7 @@ namespace EcoEditaProduto.PesquisarProduto
                     return;
                 }
 
-                dataProduto.AtualizaDgv(dgvProduto, chkAtivo());
+                dataProduto.AtualizaDgv(dgvProduto, chkAtivo(),empresa);
                 bind = new BindingSource();
                 bind.DataSource = dgvProduto.DataSource;
                 lblEncontrados.Text = "Produtos encontrados: " + dgvProduto.RowCount;
@@ -53,7 +57,7 @@ namespace EcoEditaProduto.PesquisarProduto
             
         }
 
-        void AtualizaDgv()
+        void Pesquisar()
         {
             string pesquisarPor()
             {
@@ -107,7 +111,7 @@ namespace EcoEditaProduto.PesquisarProduto
         private void TbxPalavraChave_TextChanged(object sender, EventArgs e)
         {
             //atualizaDgv();
-            AtualizaDgv();
+            Pesquisar();
         }
 
         private void ChkInativos_CheckedChanged(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace EcoEditaProduto.PesquisarProduto
         static FbConnection conexao = null;
         static string server = Properties.Settings.Default.Conexao;
 
-        public static void AtualizaDgv(DataGridView dgv, string Inativo)
+        public static void AtualizaDgv(DataGridView dgv, string Inativo, string empresa)
         {
             try
             {
@@ -38,13 +38,39 @@ namespace EcoEditaProduto.PesquisarProduto
                 "inner join testmarca mrc on (pdg.marca = mrc.codigo)                                  " +
                 "inner join testgrupo grp on (pdt.grupo = grp.codigo and pdt.empresa = grp.empresa)    " +
                 "inner join testsubgrupo sgp on (sgp.grupo = grp.codigo and sgp.empresa = grp.empresa) " +
-                "where " + Inativo + " ;";//and " + PesquisarPor + " like upper('%" + PalavraChave + "%');  ";
+                "where " + Inativo + " and pdt.empresa = @EMPRESA;";
                 FbCommand cmd = new FbCommand(query, conexao);
+                cmd.Parameters.AddWithValue("@EMPRESA", empresa);
                 DataTable table = new DataTable();
                 FbDataAdapter adapter = new FbDataAdapter();
                 adapter.SelectCommand = cmd;
                 adapter.Fill(table);
                 dgv.DataSource = table;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+        }
+
+        public static void PesquisaEmpresa(ComboBox cbx)
+        {
+            try
+            {
+                conexao = new FbConnection(server);
+                conexao.Open();
+                string query = "select   a.codigo || '-'|| a.nomefantasia as EMPRESA from tgerempresa a";
+                FbCommand cmd = new FbCommand(query, conexao);
+                FbDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbx.Items.Add(reader["EMPRESA"].ToString());
+                }
             }
             catch (Exception erro)
             {

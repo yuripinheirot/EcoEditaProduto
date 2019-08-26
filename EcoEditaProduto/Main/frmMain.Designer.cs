@@ -224,7 +224,6 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar produto";
             this.ResumeLayout(false);

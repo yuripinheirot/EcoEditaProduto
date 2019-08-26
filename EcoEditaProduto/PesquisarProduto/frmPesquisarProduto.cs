@@ -16,6 +16,7 @@ namespace EcoEditaProduto.PesquisarProduto
     public partial class frmPesquisarProduto : Form
     {
         frmMain main = null;
+        static BindingSource bind = null;
 
         //metodos
         void CarregarDgv()
@@ -34,7 +35,15 @@ namespace EcoEditaProduto.PesquisarProduto
                     }
                 }
 
+                if (bind != null)
+                {
+                    dgvProduto.DataSource = bind.DataSource;
+                    return;
+                }
+
                 dataProduto.AtualizaDgv(dgvProduto, chkAtivo());
+                bind = new BindingSource();
+                bind.DataSource = dgvProduto.DataSource;
                 lblEncontrados.Text = "Produtos encontrados: " + dgvProduto.RowCount;
             }
             catch (Exception erro)
@@ -136,6 +145,11 @@ namespace EcoEditaProduto.PesquisarProduto
             catch
             {
             }
+        }
+
+        private void FrmPesquisarProduto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dispose(true);
         }
     }
 }

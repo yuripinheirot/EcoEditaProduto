@@ -9,6 +9,14 @@ C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEdi
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CoreCompileInputs.cache
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.exe
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.pdb
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.Firebird.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.xml
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.PesquisarProduto.frmPesquisarProduto.resources
+C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CopyComplete
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.exe.config
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.exe
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\EcoEditaProduto.pdb
@@ -18,7 +26,6 @@ C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\Entity
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.xml
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csprojAssemblyReference.cache
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Main.frmMain.resources
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.PesquisarProduto.frmPesquisarProduto.resources
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Properties.Resources.resources
@@ -28,11 +35,3 @@ C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEdi
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CopyComplete
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.exe
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.pdb
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.dll
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.Firebird.dll
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.xml
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.PesquisarProduto.frmPesquisarProduto.resources
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CopyComplete

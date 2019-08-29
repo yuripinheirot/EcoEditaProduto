@@ -16,7 +16,7 @@ namespace EcoEditaProduto.Main
         public void BuscaInformacoes()
         {
             dataMain data = new dataMain();
-            modelInformacoes model = data.BuscaInformacoes(tbxIdProduto.Text);
+            modelInformacoes model = data.BuscaInformacoes(tbxIdProduto.Text,cbxEmpresa.Text.Substring(0,2),cbxAlmoxarifado.Text.Substring(0,2));
 
             tbxObservacao.Text = model.observacao;
             tbxComposicao.Text = model.composicao;
@@ -40,6 +40,11 @@ namespace EcoEditaProduto.Main
         public frmMain()
         {
             InitializeComponent();
+            dataMain.BuscaEmpresa(cbxEmpresa);
+            cbxEmpresa.SelectedIndex = 0;
+            dataMain.BuscaAlmox(cbxAlmoxarifado, cbxEmpresa.Text.Substring(0, 2));
+            cbxAlmoxarifado.SelectedIndex = 0;
+
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -49,11 +54,7 @@ namespace EcoEditaProduto.Main
 
         private void TbxIdProduto_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F2)
-            {
-                PesquisarProduto.frmPesquisarProduto frmProduto = new PesquisarProduto.frmPesquisarProduto(this);
-                frmProduto.ShowDialog();
-            }
+
         }
 
         private void TbxIdProduto_Leave(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace EcoEditaProduto.Main
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tbxIdProduto.Text) || string.IsNullOrWhiteSpace(tbxDescProduto.Text))
+            {
+                return;
+            }
+
             try
             {
                 modelInformacoes model = new modelInformacoes();
@@ -84,7 +90,8 @@ namespace EcoEditaProduto.Main
                 model.aplicacao = tbxAplicacao.Text;
                 model.referencia = tbxReferencia.Text;
                 model.codigo = tbxIdProduto.Text;
-                dataMain.SalvarInformacoes(model);
+                model.endereco = tbxLocalizacao.Text;
+                dataMain.SalvarInformacoes(model, cbxEmpresa.Text.Substring(0, 2), cbxAlmoxarifado.Text.Substring(0, 2));
                 MessageBox.Show("Dados alterados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpaTela();
 
@@ -94,5 +101,10 @@ namespace EcoEditaProduto.Main
                 MessageBox.Show("Ops! Algo inesperado aconteceu, contate o seu suporte." + "\n" + "\n" + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+        }
+
     }
 }

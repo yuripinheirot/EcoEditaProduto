@@ -29,19 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSair = new System.Windows.Forms.Button();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
-            this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.embalagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.referenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precopraticadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsProdutos = new EcoEditaProduto.PesquisarProduto.dsProdutos();
             this.lblEncontrados = new System.Windows.Forms.Label();
             this.cbxPesquisarPor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +43,14 @@
             this.chkInativos = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbxEmpresa = new System.Windows.Forms.ComboBox();
+            this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.embalagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precopraticadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsProdutos = new EcoEditaProduto.PesquisarProduto.dsProdutos();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsProdutos)).BeginInit();
@@ -73,14 +73,14 @@
             this.dgvProduto.AllowUserToOrderColumns = true;
             this.dgvProduto.AutoGenerateColumns = false;
             this.dgvProduto.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.produtoDataGridViewTextBoxColumn,
@@ -90,14 +90,14 @@
             this.referenciaDataGridViewTextBoxColumn,
             this.precopraticadoDataGridViewTextBoxColumn});
             this.dgvProduto.DataSource = this.dataTable1BindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduto.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduto.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduto.Location = new System.Drawing.Point(12, 25);
             this.dgvProduto.MultiSelect = false;
             this.dgvProduto.Name = "dgvProduto";
@@ -107,73 +107,6 @@
             this.dgvProduto.Size = new System.Drawing.Size(907, 374);
             this.dgvProduto.TabIndex = 3;
             this.dgvProduto.VirtualMode = true;
-            // 
-            // produtoDataGridViewTextBoxColumn
-            // 
-            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "produto";
-            this.produtoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.produtoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
-            this.produtoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.produtoDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Width = 375;
-            // 
-            // embalagemDataGridViewTextBoxColumn
-            // 
-            this.embalagemDataGridViewTextBoxColumn.DataPropertyName = "embalagem";
-            this.embalagemDataGridViewTextBoxColumn.HeaderText = "Emb";
-            this.embalagemDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.embalagemDataGridViewTextBoxColumn.Name = "embalagemDataGridViewTextBoxColumn";
-            this.embalagemDataGridViewTextBoxColumn.ReadOnly = true;
-            this.embalagemDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.marcaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // referenciaDataGridViewTextBoxColumn
-            // 
-            this.referenciaDataGridViewTextBoxColumn.DataPropertyName = "referencia";
-            this.referenciaDataGridViewTextBoxColumn.HeaderText = "Referência";
-            this.referenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.referenciaDataGridViewTextBoxColumn.Name = "referenciaDataGridViewTextBoxColumn";
-            this.referenciaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.referenciaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // precopraticadoDataGridViewTextBoxColumn
-            // 
-            this.precopraticadoDataGridViewTextBoxColumn.DataPropertyName = "precopraticado";
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.precopraticadoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.precopraticadoDataGridViewTextBoxColumn.HeaderText = "Preço";
-            this.precopraticadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precopraticadoDataGridViewTextBoxColumn.Name = "precopraticadoDataGridViewTextBoxColumn";
-            this.precopraticadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precopraticadoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dsProdutos;
-            // 
-            // dsProdutos
-            // 
-            this.dsProdutos.DataSetName = "dsProdutos";
-            this.dsProdutos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblEncontrados
             // 
@@ -265,6 +198,74 @@
             this.cbxEmpresa.Name = "cbxEmpresa";
             this.cbxEmpresa.Size = new System.Drawing.Size(205, 21);
             this.cbxEmpresa.TabIndex = 4;
+            this.cbxEmpresa.SelectedIndexChanged += new System.EventHandler(this.CbxEmpresa_SelectedIndexChanged);
+            // 
+            // produtoDataGridViewTextBoxColumn
+            // 
+            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "produto";
+            this.produtoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.produtoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
+            this.produtoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.produtoDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Produto";
+            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 375;
+            // 
+            // embalagemDataGridViewTextBoxColumn
+            // 
+            this.embalagemDataGridViewTextBoxColumn.DataPropertyName = "embalagem";
+            this.embalagemDataGridViewTextBoxColumn.HeaderText = "Emb";
+            this.embalagemDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.embalagemDataGridViewTextBoxColumn.Name = "embalagemDataGridViewTextBoxColumn";
+            this.embalagemDataGridViewTextBoxColumn.ReadOnly = true;
+            this.embalagemDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.marcaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // referenciaDataGridViewTextBoxColumn
+            // 
+            this.referenciaDataGridViewTextBoxColumn.DataPropertyName = "referencia";
+            this.referenciaDataGridViewTextBoxColumn.HeaderText = "Referência";
+            this.referenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.referenciaDataGridViewTextBoxColumn.Name = "referenciaDataGridViewTextBoxColumn";
+            this.referenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.referenciaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // precopraticadoDataGridViewTextBoxColumn
+            // 
+            this.precopraticadoDataGridViewTextBoxColumn.DataPropertyName = "precopraticado";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.precopraticadoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.precopraticadoDataGridViewTextBoxColumn.HeaderText = "Preço";
+            this.precopraticadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.precopraticadoDataGridViewTextBoxColumn.Name = "precopraticadoDataGridViewTextBoxColumn";
+            this.precopraticadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precopraticadoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.dsProdutos;
+            // 
+            // dsProdutos
+            // 
+            this.dsProdutos.DataSetName = "dsProdutos";
+            this.dsProdutos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmPesquisarProduto
             // 
@@ -293,7 +294,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de produto";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPesquisarProduto_FormClosed);
             this.Load += new System.EventHandler(this.FrmPesquisarProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();

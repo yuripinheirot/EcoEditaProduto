@@ -18,13 +18,18 @@ namespace EcoEditaProduto.PesquisarProduto
         frmMain main = null;
         static BindingSource bind = null;
 
+        void CarregarCbxEmpresa()
+        {
+            dataProduto.PesquisaEmpresa(cbxEmpresa);
+            cbxEmpresa.SelectedIndex = 0;
+        }
+
         //metodos
         void CarregarDgv()
         {
             try
             {
-                dataProduto.PesquisaEmpresa(cbxEmpresa);
-                cbxEmpresa.SelectedIndex = 0;
+
                 string empresa = cbxEmpresa.Text.Substring(0, 2);
 
                 string chkAtivo()
@@ -105,6 +110,7 @@ namespace EcoEditaProduto.PesquisarProduto
         private void FrmPesquisarProduto_Load(object sender, EventArgs e)
         {
             cbxPesquisarPor.Text = "Descrição";
+            CarregarCbxEmpresa();
             CarregarDgv();
         }
 
@@ -151,9 +157,9 @@ namespace EcoEditaProduto.PesquisarProduto
             }
         }
 
-        private void FrmPesquisarProduto_FormClosed(object sender, FormClosedEventArgs e)
+        private void CbxEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Dispose(true);
+            CarregarDgv();
         }
     }
 }

@@ -70,7 +70,7 @@ namespace EcoEditaProduto.Main
             {
                 conexao = new FbConnection(server);
                 conexao.Open();
-                string query = "select a.codigo ||'-'||a.razaosocial as empresa from tgerempresa a";
+                string query = "select a.codigo ||'-'||a.razaosocial as empresa from tgerempresa a order by 1 asc";
                 FbCommand cmd = new FbCommand(query, conexao);
                 FbDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -95,7 +95,7 @@ namespace EcoEditaProduto.Main
             {
                 conexao = new FbConnection(server);
                 conexao.Open();
-                string query = "select a.codigo ||'-'||a.descricao as almoxarifado from testalmox a where a.empresa = @empresa";
+                string query = "select a.codigo ||'-'||a.descricao as almoxarifado from testalmox a where a.empresa = @empresa order by 1 asc";
                 FbCommand cmd = new FbCommand(query, conexao);
                 cmd.Parameters.AddWithValue("@empresa", idEmpresa);
                 FbDataReader reader = cmd.ExecuteReader();

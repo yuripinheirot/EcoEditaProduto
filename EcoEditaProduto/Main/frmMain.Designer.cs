@@ -56,7 +56,7 @@
             this.btnSair.Location = new System.Drawing.Point(574, 374);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 8;
+            this.btnSair.TabIndex = 10;
             this.btnSair.Text = "Sai&r";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
@@ -77,7 +77,7 @@
             this.tbxDescProduto.Name = "tbxDescProduto";
             this.tbxDescProduto.ReadOnly = true;
             this.tbxDescProduto.Size = new System.Drawing.Size(572, 20);
-            this.tbxDescProduto.TabIndex = 1;
+            this.tbxDescProduto.TabIndex = 3;
             this.tbxDescProduto.TabStop = false;
             // 
             // label2
@@ -95,7 +95,7 @@
             this.tbxObservacao.MaxLength = 128;
             this.tbxObservacao.Name = "tbxObservacao";
             this.tbxObservacao.Size = new System.Drawing.Size(634, 20);
-            this.tbxObservacao.TabIndex = 2;
+            this.tbxObservacao.TabIndex = 4;
             // 
             // label3
             // 
@@ -113,7 +113,7 @@
             this.tbxAplicacao.Multiline = true;
             this.tbxAplicacao.Name = "tbxAplicacao";
             this.tbxAplicacao.Size = new System.Drawing.Size(634, 59);
-            this.tbxAplicacao.TabIndex = 5;
+            this.tbxAplicacao.TabIndex = 7;
             // 
             // label4
             // 
@@ -130,7 +130,7 @@
             this.tbxComposicao.MaxLength = 128;
             this.tbxComposicao.Name = "tbxComposicao";
             this.tbxComposicao.Size = new System.Drawing.Size(634, 20);
-            this.tbxComposicao.TabIndex = 3;
+            this.tbxComposicao.TabIndex = 5;
             // 
             // label6
             // 
@@ -147,7 +147,7 @@
             this.tbxLocalizacao.MaxLength = 128;
             this.tbxLocalizacao.Name = "tbxLocalizacao";
             this.tbxLocalizacao.Size = new System.Drawing.Size(634, 20);
-            this.tbxLocalizacao.TabIndex = 4;
+            this.tbxLocalizacao.TabIndex = 6;
             // 
             // label7
             // 
@@ -163,7 +163,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(493, 374);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "&Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -175,7 +175,7 @@
             this.tbxReferencia.Multiline = true;
             this.tbxReferencia.Name = "tbxReferencia";
             this.tbxReferencia.Size = new System.Drawing.Size(634, 59);
-            this.tbxReferencia.TabIndex = 6;
+            this.tbxReferencia.TabIndex = 8;
             // 
             // label8
             // 
@@ -194,7 +194,7 @@
             this.tbxIdProduto.Name = "tbxIdProduto";
             this.tbxIdProduto.PromptChar = ' ';
             this.tbxIdProduto.Size = new System.Drawing.Size(56, 20);
-            this.tbxIdProduto.TabIndex = 0;
+            this.tbxIdProduto.TabIndex = 2;
             this.tbxIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxIdProduto.Click += new System.EventHandler(this.TbxIdProduto_Enter);
             this.tbxIdProduto.Enter += new System.EventHandler(this.TbxIdProduto_Enter);
@@ -208,7 +208,7 @@
             this.cbxEmpresa.Location = new System.Drawing.Point(15, 25);
             this.cbxEmpresa.Name = "cbxEmpresa";
             this.cbxEmpresa.Size = new System.Drawing.Size(394, 21);
-            this.cbxEmpresa.TabIndex = 9;
+            this.cbxEmpresa.TabIndex = 0;
             // 
             // label5
             // 
@@ -236,7 +236,7 @@
             this.cbxAlmoxarifado.Location = new System.Drawing.Point(415, 25);
             this.cbxAlmoxarifado.Name = "cbxAlmoxarifado";
             this.cbxAlmoxarifado.Size = new System.Drawing.Size(234, 21);
-            this.cbxAlmoxarifado.TabIndex = 9;
+            this.cbxAlmoxarifado.TabIndex = 1;
             // 
             // frmMain
             // 

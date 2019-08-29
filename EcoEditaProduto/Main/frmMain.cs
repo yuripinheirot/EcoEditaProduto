@@ -35,7 +35,6 @@ namespace EcoEditaProduto.Main
             tbxLocalizacao.Text = null;
             tbxAplicacao.Text = null;
             tbxReferencia.Text = null;
-            tbxIdProduto.Focus();
         }
         public frmMain()
         {
@@ -94,7 +93,7 @@ namespace EcoEditaProduto.Main
                 dataMain.SalvarInformacoes(model, cbxEmpresa.Text.Substring(0, 2), cbxAlmoxarifado.Text.Substring(0, 2));
                 MessageBox.Show("Dados alterados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpaTela();
-
+                tbxIdProduto.Focus();
             }
             catch (Exception erro)
             {

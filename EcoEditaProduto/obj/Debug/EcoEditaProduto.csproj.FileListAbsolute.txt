@@ -6,7 +6,6 @@ C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEdi
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Properties.Resources.resources
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.Form1.resources
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.GenerateResource.cache
-C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.csproj.CoreCompileInputs.cache
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.exe
 C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Debug\EcoEditaProduto.pdb
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\bin\Debug\EntityFramework.dll

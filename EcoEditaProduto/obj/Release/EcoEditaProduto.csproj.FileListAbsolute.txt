@@ -13,7 +13,6 @@ C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoE
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.Properties.Resources.resources
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.Form1.resources
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.csproj.GenerateResource.cache
-C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.csproj.CoreCompileInputs.cache
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.csproj.CopyComplete
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.exe
 C:\Users\yurie\Documents\Github\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.pdb

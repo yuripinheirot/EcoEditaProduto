@@ -43,11 +43,11 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.tbxReferencia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbxIdProduto = new System.Windows.Forms.MaskedTextBox();
             this.cbxEmpresa = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Almoxarifado = new System.Windows.Forms.Label();
             this.cbxAlmoxarifado = new System.Windows.Forms.ComboBox();
+            this.tbxIdProduto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSair
@@ -186,20 +186,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Referência";
             // 
-            // tbxIdProduto
-            // 
-            this.tbxIdProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxIdProduto.Location = new System.Drawing.Point(15, 65);
-            this.tbxIdProduto.Mask = "00000";
-            this.tbxIdProduto.Name = "tbxIdProduto";
-            this.tbxIdProduto.PromptChar = ' ';
-            this.tbxIdProduto.Size = new System.Drawing.Size(56, 20);
-            this.tbxIdProduto.TabIndex = 2;
-            this.tbxIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbxIdProduto.Click += new System.EventHandler(this.TbxIdProduto_Enter);
-            this.tbxIdProduto.Enter += new System.EventHandler(this.TbxIdProduto_Enter);
-            this.tbxIdProduto.Leave += new System.EventHandler(this.TbxIdProduto_Leave);
-            // 
             // cbxEmpresa
             // 
             this.cbxEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -238,6 +224,17 @@
             this.cbxAlmoxarifado.Size = new System.Drawing.Size(234, 21);
             this.cbxAlmoxarifado.TabIndex = 1;
             // 
+            // tbxIdProduto
+            // 
+            this.tbxIdProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxIdProduto.Location = new System.Drawing.Point(15, 65);
+            this.tbxIdProduto.MaxLength = 6;
+            this.tbxIdProduto.Name = "tbxIdProduto";
+            this.tbxIdProduto.Size = new System.Drawing.Size(56, 20);
+            this.tbxIdProduto.TabIndex = 2;
+            this.tbxIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxIdProduto.Leave += new System.EventHandler(this.TbxIdProduto_Leave);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,9 +242,9 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CancelButton = this.btnSair;
             this.ClientSize = new System.Drawing.Size(663, 405);
+            this.Controls.Add(this.tbxIdProduto);
             this.Controls.Add(this.cbxAlmoxarifado);
             this.Controls.Add(this.cbxEmpresa);
-            this.Controls.Add(this.tbxIdProduto);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -295,10 +292,10 @@
         private System.Windows.Forms.TextBox tbxReferencia;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox tbxDescProduto;
-        public System.Windows.Forms.MaskedTextBox tbxIdProduto;
         private System.Windows.Forms.ComboBox cbxEmpresa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Almoxarifado;
         private System.Windows.Forms.ComboBox cbxAlmoxarifado;
+        public System.Windows.Forms.TextBox tbxIdProduto;
     }
 }

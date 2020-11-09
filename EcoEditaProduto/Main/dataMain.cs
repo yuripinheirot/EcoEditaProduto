@@ -28,6 +28,7 @@ namespace EcoEditaProduto.Main
                          "pdg.composicao,                                           " +
                          "pdg.aplicacao,                                            " +
                          "pdg.referencia,                                           " +
+                         "pdg.codigofabrica,                                        " +
                          "est.endereco                                              " +
                          "                                                          " +
                          "from testprodutogeral pdg                                 " +
@@ -50,6 +51,7 @@ namespace EcoEditaProduto.Main
                     model.aplicacao = reader["aplicacao"].ToString();
                     model.referencia = reader["referencia"].ToString();
                     model.endereco = reader["endereco"].ToString();
+                    model.codFabrica = reader["codigofabrica"].ToString();
                 }
                 return model;
             }
@@ -128,6 +130,7 @@ namespace EcoEditaProduto.Main
                        "A.observacao = @OBSERVACAO,            " +
                        "A.composicao = @COMPOSICAO,            " +
                        "A.aplicacao = @APLICACAO,              " +
+                       "A.codigofabrica = @CODFABRICA,         " +
                        "A.referencia = @REFERENCIA             " +
                        "WHERE                                  " +
                        "cast(A.codigo as int) = @CODIGO;       ";
@@ -138,6 +141,7 @@ namespace EcoEditaProduto.Main
                     cmd.Parameters.AddWithValue("@REFERENCIA", model.referencia);
                     cmd.Parameters.AddWithValue("@CODIGO", model.codigo);
                     cmd.Parameters.AddWithValue("@ENDERECO", model.endereco);
+                    cmd.Parameters.AddWithValue("@CODFABRICA", model.codFabrica);
                     cmd.Parameters.AddWithValue("@EMPRESA", empresa);
                     cmd.Parameters.AddWithValue("@ALMOXARIFADO", almoxarifado);
                     cmd.ExecuteNonQuery();

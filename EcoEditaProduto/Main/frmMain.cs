@@ -24,6 +24,7 @@ namespace EcoEditaProduto.Main
             tbxAplicacao.Text = model.aplicacao;
             tbxReferencia.Text = model.referencia;
             tbxDescProduto.Text = model.descricao;
+            tbxCodFabrica.Text = model.codFabrica;
         }
 
         public void LimpaTela()
@@ -35,6 +36,7 @@ namespace EcoEditaProduto.Main
             tbxLocalizacao.Text = null;
             tbxAplicacao.Text = null;
             tbxReferencia.Text = null;
+            tbxCodFabrica.Text = null;
         }
         public frmMain()
         {
@@ -90,6 +92,7 @@ namespace EcoEditaProduto.Main
                 model.referencia = tbxReferencia.Text;
                 model.codigo = tbxIdProduto.Text;
                 model.endereco = tbxLocalizacao.Text;
+                model.codFabrica = tbxCodFabrica.Text;
                 dataMain.SalvarInformacoes(model, cbxEmpresa.Text.Substring(0, 2), cbxAlmoxarifado.Text.Substring(0, 2));
                 MessageBox.Show("Dados alterados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpaTela();
@@ -105,5 +108,12 @@ namespace EcoEditaProduto.Main
         {
         }
 
+        private void frmMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.SelectNextControl(this.ActiveControl, !e.Shift, true, true, true);
+            }
+        }
     }
 }

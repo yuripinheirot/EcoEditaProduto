@@ -48,6 +48,8 @@
             this.Almoxarifado = new System.Windows.Forms.Label();
             this.cbxAlmoxarifado = new System.Windows.Forms.ComboBox();
             this.tbxIdProduto = new System.Windows.Forms.TextBox();
+            this.tbxCodFabrica = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSair
@@ -56,7 +58,7 @@
             this.btnSair.Location = new System.Drawing.Point(574, 374);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 10;
+            this.btnSair.TabIndex = 11;
             this.btnSair.Text = "Sai&r";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
@@ -112,7 +114,7 @@
             this.tbxAplicacao.MaxLength = 384;
             this.tbxAplicacao.Multiline = true;
             this.tbxAplicacao.Name = "tbxAplicacao";
-            this.tbxAplicacao.Size = new System.Drawing.Size(634, 59);
+            this.tbxAplicacao.Size = new System.Drawing.Size(320, 59);
             this.tbxAplicacao.TabIndex = 7;
             // 
             // label4
@@ -163,7 +165,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(493, 374);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.TabIndex = 10;
             this.btnSalvar.Text = "&Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -175,7 +177,7 @@
             this.tbxReferencia.Multiline = true;
             this.tbxReferencia.Name = "tbxReferencia";
             this.tbxReferencia.Size = new System.Drawing.Size(634, 59);
-            this.tbxReferencia.TabIndex = 8;
+            this.tbxReferencia.TabIndex = 9;
             // 
             // label8
             // 
@@ -235,6 +237,24 @@
             this.tbxIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxIdProduto.Leave += new System.EventHandler(this.TbxIdProduto_Leave);
             // 
+            // tbxCodFabrica
+            // 
+            this.tbxCodFabrica.Location = new System.Drawing.Point(341, 221);
+            this.tbxCodFabrica.MaxLength = 384;
+            this.tbxCodFabrica.Multiline = true;
+            this.tbxCodFabrica.Name = "tbxCodFabrica";
+            this.tbxCodFabrica.Size = new System.Drawing.Size(308, 59);
+            this.tbxCodFabrica.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(338, 205);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Cod fábrica";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +267,7 @@
             this.Controls.Add(this.cbxEmpresa);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -256,6 +277,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxReferencia);
+            this.Controls.Add(this.tbxCodFabrica);
             this.Controls.Add(this.tbxAplicacao);
             this.Controls.Add(this.tbxLocalizacao);
             this.Controls.Add(this.tbxComposicao);
@@ -270,6 +292,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar produto";
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +320,7 @@
         private System.Windows.Forms.Label Almoxarifado;
         private System.Windows.Forms.ComboBox cbxAlmoxarifado;
         public System.Windows.Forms.TextBox tbxIdProduto;
+        private System.Windows.Forms.TextBox tbxCodFabrica;
+        private System.Windows.Forms.Label label9;
     }
 }

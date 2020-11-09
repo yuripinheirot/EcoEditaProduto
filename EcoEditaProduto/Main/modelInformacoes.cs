@@ -15,5 +15,6 @@ namespace EcoEditaProduto.Main
         public string endereco { get; set; }
         public string aplicacao { get; set; }
         public string referencia { get; set; }
+        public string codFabrica { get; set; }
     }
 }

@@ -35,3 +35,4 @@ C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoE
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.csproj.CopyComplete
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.exe
 C:\Users\yurii\Documents\GitHub\ecoeditaproduto\EcoEditaProduto\obj\Release\EcoEditaProduto.pdb
+C:\Users\yurie\Documents\Github\EcoEditaProduto\EcoEditaProduto\obj\Release\EcoEditaProduto.csproj.CoreCompileInputs.cache
